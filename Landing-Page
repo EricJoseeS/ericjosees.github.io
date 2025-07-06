@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eric José - Desenvolvedor</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)),
+                  url('https://i.ibb.co/ymgrRnts/stars.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f1f5f9;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
+
+    nav {
+      background: rgba(15, 23, 42, 0.8);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      border-radius: 8px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: #38bdf8;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      color: #0ea5e9;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    section {
+      background-color: rgba(15, 23, 42, 0.7);
+      padding: 2rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.1);
+      display: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    section h2 {
+      color: #38bdf8;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    article {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-left: 3px solid #38bdf8;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    aside {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 2rem auto;
+      max-width: 800px;
+    }
+
+    footer {
+      text-align: center;
+      margin: 3rem 0 1rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    a.social {
+      display: inline-block;
+      margin: 0.3rem 0.8rem;
+      color: #38bdf8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.ibb.co/pv84b7zq/eric.jpg" alt="Foto de Eric José" />
+    <h1>Eric José</h1>
+    <p>"Construindo com código, conectando com alma."</p>
+  </header>
+
+  <nav>
+    <button onclick="toggleSection('sobre')">Sobre mim</button>
+    <button onclick="toggleSection('habilidades')">Habilidades</button>
+    <button onclick="toggleSection('projetos')">Projetos</button>
+    <button onclick="toggleSection('extras')">Extras</button>
+  </nav>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p>Sou um desenvolvedor web apaixonado por experiências digitais fluidas, minimalistas e significativas. Além do código, encontro inspiração em calistenia, filosofia e na vastidão silenciosa do universo.</p>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>HTML5, CSS3 e JavaScript</li>
+        <li>Git e GitHub</li>
+        <li>Criação de páginas responsivas</li>
+        <li>Tailwind CSS (iniciante)</li>
+        <li>Noções de React.js</li>
+      </ul>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <article>
+        <h3>Portfólio Pessoal</h3>
+        <p>Uma página elegante e escura que reflete minha identidade como desenvolvedor. Responsiva, limpa e com elementos suaves.</p>
+      </article>
+      <article>
+        <h3>Galáxia da Filosofia</h3>
+        <p>Site fictício que explora ideias de Platão a Baudrillard, com UI minimalista e integração com citações aleatórias.</p>
+      </article>
+    </section>
+
+    <section id="extras">
+      <h2>Mais sobre mim</h2>
+      <ul>
+        <li>🪐 Apaixonado pelo cosmos e suas metáforas</li>
+        <li>💪 Pratico calistenia regularmente</li>
+        <li>📷 Curioso por fotografia e estética visual</li>
+      </ul>
+      <div style="margin-top: 1rem;">
+        <a class="social" href="https://github.com/EricJoseeS" target="_blank">GitHub</a>
+        <a class="social" href="https://www.linkedin.com/in/ericjosee/" target="_blank">LinkedIn</a>
+        <a class="social" href="mailto:lingqeric@gmail.com">E-mail</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contato: <a href="mailto:lingqeric@gmail.com" style="color:#38bdf8;">lingqeric@gmail.com</a></p>
+    <p>© 2025 Eric José. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
