@@ -1,2 +1,6 @@
 # ericjosees.github.io
-Mine
+
+
+
+
+https://ericjosees.github.io/
